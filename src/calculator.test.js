@@ -39,3 +39,7 @@ it("should throw exception when adding multiple negative numbers", () => {
     }
 	expect(testManyNeg).toThrow("Negatives not allowed: -5,-1,-2,-4");
 });
+
+it("should ignore numbers larger than 1000", () => {
+	expect(add("2\n1001\n5")).toBe(7);
+});
