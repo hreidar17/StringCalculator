@@ -4,13 +4,9 @@ function add (numbers){
 	}
     if(numbers.includes("\n") || numbers.includes(",")){
         var arr = numbers.split(/[\n,\s]+/);
-
-        return numberSum(arr);
+        //var numArr = verifyNums(arr);
+        return numberSum(verifyNums(arr));
     }
-	//if(numbers.includes(",")){
-    //    var arr = numbers.split(",");
-    //    return numberSum(arr);
-    //}
     else{
 	    return parseInt(numbers);
 	}
@@ -23,6 +19,24 @@ function numberSum(numberArr){
         total += parseInt(numberArr[i]);
     }
     return total;
+}
+
+function verifyNums(numArr){
+    var negativeNums = [];
+    //var counter = 0;
+
+    for (var i = 0; i < numArr.length; i++){
+        if(parseInt(numArr[i]) < 0){
+            negativeNums.push(numArr[i]);
+            //negativeNums[counter] = parseInt(numArr[i]);
+            //counter++;
+        }
+        if(negativeNums.length > 0){
+            throw("Negatives not allowed: " + negativeNums.join());
+        }
+    }
+
+    return numArr;
 }
 
 module.exports = add;

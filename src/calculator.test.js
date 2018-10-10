@@ -24,3 +24,10 @@ it("should sumerize multiple numbers with linebreak and spaces", () => {
 	expect(add("2\n3, 5 ,10")).toBe(20);
 });
 
+it("should throw exception when adding negative number", () => {
+
+    function testOneNeg(){
+        add("-5, 4");
+    }
+	expect(testOneNeg).toThrow("Negatives not allowed: -5");
+});
