@@ -4,7 +4,6 @@ function add (numbers){
 	}
     if(numbers.includes("\n") || numbers.includes(",")){
         var arr = numbers.split(/[\n,\s]+/);
-        //var numArr = verifyNums(arr);
         return numberSum(verifyNums(arr));
     }
     else{
@@ -23,19 +22,15 @@ function numberSum(numberArr){
 
 function verifyNums(numArr){
     var negativeNums = [];
-    //var counter = 0;
 
     for (var i = 0; i < numArr.length; i++){
         if(parseInt(numArr[i]) < 0){
             negativeNums.push(numArr[i]);
-            //negativeNums[counter] = parseInt(numArr[i]);
-            //counter++;
-        }
-        if(negativeNums.length > 0){
-            throw("Negatives not allowed: " + negativeNums.join());
         }
     }
-
+    if(negativeNums.length > 0){
+        throw("Negatives not allowed: " + negativeNums.join());
+    }
     return numArr;
 }
 

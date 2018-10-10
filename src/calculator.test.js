@@ -31,3 +31,11 @@ it("should throw exception when adding negative number", () => {
     }
 	expect(testOneNeg).toThrow("Negatives not allowed: -5");
 });
+
+it("should throw exception when adding multiple negative numbers", () => {
+
+    function testManyNeg(){
+        add("-5, -1, -2, \n-4");
+    }
+	expect(testManyNeg).toThrow("Negatives not allowed: -5,-1,-2,-4");
+});
