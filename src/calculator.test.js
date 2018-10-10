@@ -16,3 +16,7 @@ it("should sumerize multiple numbers", () => {
 	expect(add("1,2,3")).toBe(6);
 });
 
+it("should sumerize multiple numbers with linebreak", () => {
+	expect(add("1\n2,6,1")).toBe(10);
+});
+

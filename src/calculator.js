@@ -2,6 +2,11 @@ function add (numbers){
     if(numbers == ""){
 		return 0
 	}
+    if(numbers.includes("\n")){
+        var arr = numbers.split(/[\n,]+/);
+
+        return numberSum(arr);
+    }
 	if(numbers.includes(",")){
         var arr = numbers.split(",");
 
