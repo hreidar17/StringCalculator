@@ -20,3 +20,7 @@ it("should sumerize multiple numbers with linebreak", () => {
 	expect(add("1\n2,6,1")).toBe(10);
 });
 
+it("should sumerize multiple numbers with linebreak and spaces", () => {
+	expect(add("2\n3, 5 ,10")).toBe(20);
+});
+

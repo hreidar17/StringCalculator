@@ -2,16 +2,15 @@ function add (numbers){
     if(numbers == ""){
 		return 0
 	}
-    if(numbers.includes("\n")){
-        var arr = numbers.split(/[\n,]+/);
+    if(numbers.includes("\n") || numbers.includes(",")){
+        var arr = numbers.split(/[\n,\s]+/);
 
         return numberSum(arr);
     }
-	if(numbers.includes(",")){
-        var arr = numbers.split(",");
-
-        return numberSum(arr);
-    }
+	//if(numbers.includes(",")){
+    //    var arr = numbers.split(",");
+    //    return numberSum(arr);
+    //}
     else{
 	    return parseInt(numbers);
 	}
