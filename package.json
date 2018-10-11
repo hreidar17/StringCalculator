@@ -1,0 +1,26 @@
+{
+  "name": "stringcalculator",
+  "version": "1.0.0",
+  "description": "Excercise 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hreidar17/StringCalculator.git"
+  },
+  "keywords": [
+    "SC"
+  ],
+  "author": "hreidar17",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hreidar17/StringCalculator/issues"
+  },
+  "homepage": "https://github.com/hreidar17/StringCalculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  }
+}
