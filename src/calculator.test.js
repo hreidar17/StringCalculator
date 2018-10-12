@@ -35,11 +35,20 @@ it("should throw exception when adding negative number", () => {
 it("should throw exception when adding multiple negative numbers", () => {
 
     function testManyNeg(){
-        add("-5, -1, -2, \n-4");
+        add("-5, -1, -2\n -4");
     }
-	expect(testManyNeg).toThrow("Negatives not allowed: -5,-1,-2,-4");
+	expect(testManyNeg).toThrow("Negatives not allowed: -5, -1, -2, -4");
 });
 
 it("should ignore numbers larger than 1000", () => {
 	expect(add("2\n1001\n5")).toBe(7);
 });
+
+it("should handle a new delimitor", () => {
+	expect(add("//;\n2;3,1000;1005")).toBe(1005);
+});
+
+it("should handle a new delimitor with various length", () => {
+	expect(add("//**\n3****3*4")).toBe(10);
+});
+
