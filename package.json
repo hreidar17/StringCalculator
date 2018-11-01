@@ -21,6 +21,13 @@
   "homepage": "https://github.com/hreidar17/StringCalculator#readme",
   "devDependencies": {
     "jest": "^23.6.0",
+    "merge": "^1.2.1",
     "supertest": "^3.3.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "pkg": "^4.3.4",
+    "prompt": "^1.0.0",
+    "yarn": "^1.10.1"
   }
 }

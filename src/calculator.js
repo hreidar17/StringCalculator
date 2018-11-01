@@ -1,11 +1,14 @@
 function add (numbers){
     //If input is empty we return 0
     if(numbers == ""){
+      //console.log("0");
 		return 0
 	}
     //If input is NaN i.e. contains characters other than numeric we return their total sum
     if(isNaN(numbers)){
-        return numberSum(verifyNums(splitIntoArray(numbers)));
+        var retval = numberSum(verifyNums(splitIntoArray(numbers)));
+        //console.log(retval);
+        return retval;
     }
     //If input is a single number then we verify it's not negative or over 1000
     else{
